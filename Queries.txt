@@ -1,0 +1,5 @@
+php bin/console doctrine:generate:entity --entity AppBundle:AccountType --no-interaction --format=annotation --fields="title:string(length=50)"
+
+php bin/console doctrine:generate:entity --entity AppBundle:Account --no-interaction --format=annotation --fields="accountTypeId:integer accountNumber:integer title:string(length=255) description:text createdAt:datetime updatedAt:datetime"   
+
+php bin/console doctrine:generate:entity --entity AppBundle:AccountTransaction --no-interaction --format=annotation --fields="timeStamp:datetime accountId:integer deposit:float withdrawal:float closingBalance:float"
